@@ -136,10 +136,11 @@ button {
 .contacts-link:hover, .contacts-link:focus {
   color: var(--accent-color);
 }
-.contacts-link:hover  .phone-icon {
+
+.contacts-link:hover  .phone-icon, .contacts-link:focus  .phone-icon  {
   fill: var(--accent-color);
 }
-.contacts-link:hover .mail-icon {
+.contacts-link:hover .mail-icon, .contacts-link:focus .mail-icon {
   fill: var(--accent-color);
 }
 .mail-icon {
@@ -177,10 +178,14 @@ button {
 .btn-second {
   background: var(--bg-color-lite);
   color: var(--color-text-secondary);
+  font-weight: 500;
   border-radius: 4px;
   border: transparent;
   padding: 6px 22px;
 
+}
+.btn-second:hover , .btn-second:focus  {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .btn:hover,
 .btn:focus {
@@ -214,38 +219,31 @@ button {
   margin: 0 auto;
 }
 /* Our-------Benefits */
-.benefits-item::before {
-  content: "";
-  width: 270px;
+.benefits-item-icon {
+    width: 270px;
   height: 120px;
-  display: inline-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: var(--bg-color-lite);
   margin-bottom: 30px;
-  
 }
-.attention::before {
-  content: "";
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url(../img/antenna.svg);
+
+.attention {
+  width: 70px;
+  height: 70px;
 }
-.punctuality::before {
-  content: "";
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url(../img/clock.svg);
+.punctuality {
+  width: 70px;
+  height: 70px;
 }
-.planning::before {
-  content: "";
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url(../img/Vector.svg);
+.planning {
+  width: 70px;
+  height: 70px;
 }
-.technologies::before {
-  content: "";
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url(../img/astronaut.svg);
+.technologies {
+  width: 70px;
+  height: 70px;
 }
 .benefits-list {
   display: flex;
@@ -335,21 +333,28 @@ button {
   margin-top: 15px;
 }
 .mentor-link {
+  display: block;
   width: 44px;
   height: 44px;
-  display: inline-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
+
+}
+.mentor-item:not(:last-child) {
+  margin-right:10px;
 }
 .mentor-icon {
   width: 20px;
   height: 20px;
-  margin: auto;
+  
   fill: rgba(175, 177, 184, 1);
 }
 .mentor-link:hover, .mentor-link:focus {
   background: var(--accent-color);
 }
-.mentor-link:hover .mentor-icon {
+.mentor-link:hover .mentor-icon ,.mentor-link:focus .mentor-icon  {
   fill: var(--primary-white-color);
 }
 /* Partners-Section ---------------*/
@@ -359,13 +364,15 @@ button {
 .partners {
   margin-top: 50px;
   display: flex;
-  justify-content: center;
+  
 }
-.partners-list {
+.partners-list:not(:last-child) {
   margin-right: 30px;
 }
 .partners-link {
-  display: inline-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 170px;
   height: 92px;
   border: 1px solid #AFB1B8;
@@ -377,13 +384,13 @@ button {
 .partner-icon {
   width: 106px;
   height: 60px;
-  margin: auto;
+  
   
 }
-.partners-link:hover {
+.partners-link:hover , .partners-link:focus {
   border-color: var(--accent-color);
 }
-.partners-link:hover .group {
+.partners-link:hover .group, .partners-link:focus .group {
   
   fill: var(--accent-color);
   
@@ -410,6 +417,7 @@ button {
   padding: 60px 0;
 }
 .footer-wrap {
+  align-items: baseline;
   display: flex;
 }
 .footer-item:not(:last-child) {
@@ -446,7 +454,7 @@ button {
 }
 .footer-links-wrap {
   margin-left: 70px;
-  margin-top: 12px;
+  
 }
 .footer-link-title {
   font-weight: 700;
@@ -460,11 +468,13 @@ button {
   display: flex;
   margin-top: 20px;
 }
-.footer-link-items {
+.footer-link-items:not(:last-child) {
   margin-right: 10px;
 }
 .footer-social-link {
-  display: inline-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -472,14 +482,14 @@ button {
   
 
 }
-.footer-social-link:hover {
+.footer-social-link:hover, .footer-social-link:focus{
   background: var(--accent-color);
 
 }
 .social-icon {
   width: 20px;
   height: 20px;
-  margin: auto;
+  
   fill: var(--primary-white-color);
 }
 /* --------------------------------------------------------------- */
@@ -502,7 +512,7 @@ button {
 }
   
 
-.portfolio-link:hover {
+.portfolio-link:hover ,.portfolio-link:focus {
   display: inline-block;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
